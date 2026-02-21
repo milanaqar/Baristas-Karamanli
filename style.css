@@ -1,0 +1,250 @@
+/* Baristas Coffee Linktree Styles */
+:root {
+    --primary-blue: #38bdf8;
+    --brown: #8B5E3C;
+    --dark: #1a1a1a;
+    --bg: #f8f9fa;
+    --white: #ffffff;
+    --shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Blobs */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.15;
+}
+.blob-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--brown);
+    top: -100px;
+    right: -100px;
+}
+.blob-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary-blue);
+    bottom: -50px;
+    left: -50px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.logo-svg {
+    width: 90px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 2.75rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    color: var(--primary-blue);
+    line-height: 0.9;
+}
+
+.brand-sub {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--primary-blue);
+    align-self: flex-end;
+    margin-top: 0.25rem;
+}
+
+/* Slogans */
+.slogans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.slogan-item {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--brown);
+}
+
+.slogan-item.blue {
+    color: var(--primary-blue);
+}
+
+/* Links Container */
+.links-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(0,0,0,0.05);
+    animation: slideInLeft 0.5s ease-out both;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Link Colors */
+.bg-instagram { background-color: #E1306C; }
+.bg-tiktok { background-color: #000000; }
+.bg-google { background-color: #4285F4; }
+.bg-efood { background-color: #ff0000; }
+.bg-wolt { background-color: #00c2e8; }
+.bg-box { background-color: #ff6b00; }
+
+/* Contact Section */
+.contact-section {
+    width: 100%;
+    max-width: 400px;
+    background: var(--white);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,0.05);
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.contact-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brown);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--dark);
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    transition: background 0.2s;
+}
+
+.contact-item:hover {
+    background: #f8f9fa;
+}
+
+.contact-icon-wrapper {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary-blue);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.footer-text {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .brand-name { font-size: 2.25rem; }
+    .brand-sub { font-size: 0.9rem; }
+}
